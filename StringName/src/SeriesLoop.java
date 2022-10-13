@@ -7,7 +7,7 @@ public class SeriesLoop {
 			System.out.println(num);
 			num=num*2;
 		}
-
+//
 	}
 
 }
