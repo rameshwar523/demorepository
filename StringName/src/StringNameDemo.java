@@ -9,8 +9,7 @@ public class StringNameDemo {
 	StringNameDemo obj=new StringNameDemo();
 	String s=obj.getStudentName("Rameshwar");
 	System.out.println("My Name is "+s);
-	System.out.println("My Name is "+s);
-System.out.println("My Name is "+s);
+	
 	}
 
 }
