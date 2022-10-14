@@ -13,9 +13,15 @@ public void oddEvenCheck(int num) {
 		Scanner scannerObj=new Scanner(System.in);
 		OddEvenNumber oddEvenObj=new OddEvenNumber();
 		System.out.println("Enter the Number");
-		int num2=scannerObj.nextInt();
-		oddEvenObj.oddEvenCheck(num2);
 		
+		int num2=scannerObj.nextInt();
+		//checking number is positive or not
+		if(num2>0){
+		oddEvenObj.oddEvenCheck(num2);
+		}
+		else{
+			System.out.println("Number is negative!.");
+		}
 
 	}
 
