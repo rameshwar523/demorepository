@@ -7,7 +7,7 @@ public class StringNameDemo {
 	}
 	public static void main(String[] args) {
 	StringNameDemo obj=new StringNameDemo();
-	String s=obj.getStudentName("Rameshwar");
+	String s=obj.getStudentName("Rameshwar Shinde");
 	System.out.println("My Name is "+s);
 	
 	}
