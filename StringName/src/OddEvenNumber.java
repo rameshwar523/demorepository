@@ -6,7 +6,7 @@ public void oddEvenCheck(int num) {
 		System.out.println("Number is Even");
 	}else {
 		System.out.println("Number is Odd");
-	}
+	}//1
 }
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
