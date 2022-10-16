@@ -10,7 +10,7 @@ public class Test {
 	
 	public static void clearConsole()
 	{
-		System.out.println("console cleared.");
+		
     
 	}
 	
