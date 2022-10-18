@@ -67,10 +67,9 @@ public class Display implements DisplayInterface {
 		System.out.print("\n+++++++++++++++++++++++++++++++++++Admin Menu++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 		System.out.print("\n1.View student details.");
 		System.out.print("\n2.Main menu.");
-		System.out.print("\n3.Exit.");
 		System.out.print("\nChoose Menu:");
 		option=scb.nextInt();
-		if(option<=3&&option>0) {
+		if(option<=2&&option>0) {
 		this.menuChoiceAdmin(option);
 		}else {
 			System.out.println("Wrong input.\n Try agin with correction input.");
@@ -86,10 +85,8 @@ public class Display implements DisplayInterface {
 		       break;
 		case 2:this.menuMain();
 		break;
-		case 3:System.out.println("Successfully Exit...");
+		default: this.menuMain();
 		break;
-			default: this.menuMain();
-			break;
 		}
 	}
 	/*this method is written for display the students who are register and given exam */
@@ -135,6 +132,7 @@ public class Display implements DisplayInterface {
 		// Here new student registered
 		Students std=new Students();
 		Scanner sbh=new Scanner(System.in);
+		Scanner inputExam=new Scanner(System.in);
 		System.out.print("\nPlease enter User Name:");
 		String userName=sbh.nextLine();
 		if(DBConnections.checkStudentRegister(userName)) {
@@ -149,11 +147,17 @@ public class Display implements DisplayInterface {
 		System.out.print("\nPlease enter Student id:");
 		std.setStudent_id(sbh.nextLine().toString());
 		System.out.println("\nPlease enter Exam Name:\n1.Java.\n2.C.\n3.C++.");
-		int ex=sbh.nextInt();
+		int ex=inputExam.nextInt();
 		if(ex>0&&ex<=3) {
-			if(ex==1)std.setExam_details("Java");
-			else if(ex==2)std.setExam_details("C");
-			else std.setExam_details("C++");
+			if(ex==1) {
+				std.setExam_details("Java");
+			}
+			else if(ex==2) {
+				std.setExam_details("C");
+			}
+			else {
+				std.setExam_details("C++");
+			}
 		}
 		
 		return std;
