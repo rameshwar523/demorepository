@@ -9,6 +9,13 @@ public class Students {
 	private String exam_details;
 	private String score;
 	private String student_name;
+	private String password;
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
 	public String getStudent_name() {
 		return student_name;
 	}
